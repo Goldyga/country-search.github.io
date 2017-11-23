@@ -22,21 +22,21 @@ function getJoke() {
 
 
 
-var url = 'https://api.icndb.com/jokes/random';
-var $paragraph = $('#joke');
+// var url = 'https://api.icndb.com/jokes/random';
+// var $paragraph = $('#joke');
 
-var $button = $('#get-joke').click(function() {
-	getJoke();
-});
+// var $button = $('#get-joke').click(function() {
+// 	getJoke();
+// });
 
-function getJoke() {
-$.ajax({
-	method: 'GET',
-	url: url,
-	success: function(res) {
-		$paragraph.text(res.value.joke);
-	}
+// function getJoke() {
+// $.ajax({
+// 	method: 'GET',
+// 	url: url,
+// 	success: function(res) {
+// 		$paragraph.text(res.value.joke);
+// 	}
 
-});
-}
+// });
+// }
 
