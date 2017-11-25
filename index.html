@@ -7,16 +7,18 @@
         <link rel="stylesheet" type="text/css" href="css/setGrid.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
 
-        <nav class="navigation">
+        <nav id="nav" class="navigation">
             <h1>Country information search</h1>
             <div class="navigation__search">
-                <input id="country-name" class="navigation__search--input" type="text" placeholder="Enter the english name of the country" />
+                <input id="country-name" class="navigation__search--input" type="text" placeholder="Enter name of the country" />
                 <button id="search" class="navigation__search--btn">Search</button>
             </div>
         </nav>
+        <button id="fixSearch" class="fixed__btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
         <section class="search container">
             <div id="countries" class="search__countries">
             </div>

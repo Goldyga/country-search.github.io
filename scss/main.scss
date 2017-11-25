@@ -9,6 +9,7 @@ body {
 	margin: 0 auto;
 	background-image: url(../imageMin/searchBckg.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
 	height: 100vh;
 	overflow: hidden;
@@ -17,19 +18,23 @@ body {
     display: none; 
 }
 input::-webkit-input-placeholder {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bolder;
 }
 .navigation {
 	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
+	height: 100%;
 	padding-bottom: 50px;
+	transition: 1s;
 
 	&__search {
-		display: inline-block;
+		
 
 		&--btn {
-			display: inline-block;
 			margin: 10px;
 			padding: 10px;
 			font-size: 25px;
@@ -48,6 +53,7 @@ input::-webkit-input-placeholder {
 		&--input {
 			height: 60px;
 			width: auto;
+			white-space: normal;
 			font-size: 20px;
 			font-weight: bolder;
 			text-transform: uppercase;
@@ -55,7 +61,6 @@ input::-webkit-input-placeholder {
 			outline: none;
 			@include border-radius(10px);
 			margin: 20px;
-			display: block;
 		}
 	}
 	h1 {
@@ -66,6 +71,23 @@ input::-webkit-input-placeholder {
 		color: #FF0004;
 		margin: 0;
 		padding: 50px;
+	}
+}
+
+.fixed__btnSearch {
+	position: fixed;
+	top: 2%;
+	right: 5%;
+	cursor: pointer;
+	background-color: blue;
+	border: none;
+	color: #FFFFFF;
+	padding: 20px;
+	@include border-radius(50px);
+	outline: none;
+
+	.fa-search {
+		font-size: 35px;
 	}
 }
 
@@ -95,6 +117,11 @@ input::-webkit-input-placeholder {
 				margin: 20px;
 				height: 100px;
 				width: 150px;
+			}
+			h2 {
+				color: green;
+				align-self: center;
+				font-size: 30px;
 			}
 			p {
 				align-self: flex-start;
