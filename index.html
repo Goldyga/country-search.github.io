@@ -10,8 +10,17 @@
     </head>
     <body>
 
-        <button id="get-joke">Random joke</button>
-        <p id="joke"></p>
+        <nav class="navigation">
+            <h1>Country information search</h1>
+            <div class="navigation__search">
+                <input id="country-name" class="navigation__search--input" type="text" placeholder="Enter the english name of the country" />
+                <button id="search" class="navigation__search--btn">Search</button>
+            </div>
+        </nav>
+        <section class="search container">
+            <div id="countries" class="search__countries">
+            </div>
+        </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
