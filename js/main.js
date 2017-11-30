@@ -4,24 +4,29 @@ var input = $('#country-name');
 var nav = $('#nav');
 var searchBtn = $('#fixSearch');
 
+// This function hides the fixed search icon when the page loaded.
 $( document ).ready(function() {
     $(searchBtn).hide();	
 });
 
+// This listener turns on search function
 $('#search').click(searchCountries);
 
+// This listener turns on search function
 $(searchBtn).click(function(e) {
 	$(nav).css("opacity", "1");
 	$(nav).css("height", "100%");
 	$(searchBtn).hide();
 });
 
+// This listener hides the main search screen
 $(input).keypress(function(e) {
     if(e.which == 13) {
         searchCountries();
     }
 });
 
+// This function is responsible for request send to the server and react on response (turns on showCountriesList or jumpBtn functions)
 function searchCountries() {
   	var countryName = $(input).val();
   	if(!countryName.length) countryName = jumpBtn();
@@ -37,6 +42,7 @@ function searchCountries() {
   	});
 }
 
+// This function alarms about wrong data and controls view input area.
 function jumpBtn() {
 	$(input).css("animation", "jump .9s infinite");
 	$(input).css("color", "#FF0004");
@@ -49,6 +55,8 @@ function jumpBtn() {
 	setTimeout(rmvAtrr, 2000);
 }
 
+// This function clears countriesList elements, hides main search screen and turns on fixed search icon 
+// and using forEach loop appends to countriesList the data downloaded from API.
 function showCountriesList(resp) {
 	countriesList.empty();
 	$(input).val("");

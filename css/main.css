@@ -92,7 +92,8 @@ input::-webkit-input-placeholder {
   .search__countries {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding-bottom: 100px; }
     .search__countries--box {
       display: flex;
       flex-direction: column;
